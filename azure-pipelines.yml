@@ -101,7 +101,7 @@ jobs:
       inputs:
         command: 'restore'
         arguments: '-r linux-x64'
-        artifactoryService: 'JfrogArtifactory'
+        artifactoryService: 'azureArt'
         targetResolveRepo: 'nuget'
         solutionPath: '**/*.sln'
         collectBuildInfo: true
@@ -114,7 +114,7 @@ jobs:
       #enabled: ${{ parameters.enabled }}
       displayName: "Send build info to JFrog"
       inputs:
-        artifactoryService: "JfrogArtifactory"
+        artifactoryService: "azureArt"
         buildName: 'jfrog-build-info-test'
         buildNumber: '$(Build.BuildNumber)'
       env:
